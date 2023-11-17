@@ -2,13 +2,11 @@
   position: relative;
   overflow: hidden;
 }
-.dice-tooltip .part-header {
-  display: none;
-}
 .dice-roll .dice-result:has(.expanded) .dice-tooltip {
   display: flex !important;
   flex-wrap: wrap;
   height: fit-content !important;
+  flex-direction: column;
 }
 .dice-roll .dice-formula {
   display: none;
