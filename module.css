@@ -1,0 +1,22 @@
+.dice-roll .dice-result {
+  position: relative;
+  overflow: hidden;
+}
+.dice-tooltip .part-header {
+  display: none;
+}
+.dice-roll .dice-result:has(.expanded) .dice-tooltip {
+  display: flex !important;
+  flex-wrap: wrap;
+  height: fit-content !important;
+}
+.dice-roll .dice-formula {
+  display: none;
+}
+.dice-roll .dice-result .dice-tooltip,
+.dice-roll .dice-result:has(.expanded) .dice-total {
+  display: none !important;
+}
+.dice-roll .dice-result:has(.expanded) .dice-formula {
+  display: block;
+}
