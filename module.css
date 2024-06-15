@@ -1,20 +1,33 @@
-.dice-roll .dice-result {
-  position: relative;
-  overflow: hidden;
-}
-.dice-roll .dice-result:has(.expanded) .dice-tooltip {
-  display: flex !important;
-  flex-wrap: wrap;
-  height: fit-content !important;
-  flex-direction: column;
-}
-.dice-roll .dice-formula {
-  display: none;
-}
-.dice-roll .dice-result .dice-tooltip,
-.dice-roll .dice-result:has(.expanded) .dice-total {
-  display: none !important;
-}
-.dice-roll .dice-result:has(.expanded) .dice-formula {
-  display: block;
+.dice-roll {
+
+  .dice-formula {
+    display: none;
+  }
+
+  .dice-result {
+    position: relative;
+    overflow: hidden;
+
+    .dice-tooltip {
+      display: none !important;
+    }
+
+    &:has(.expanded) {
+
+      .dice-tooltip {
+        display: flex !important;
+        flex-wrap: wrap;
+        height: fit-content !important;
+        flex-direction: column;
+      }
+
+      .dice-total {
+        display: none !important;
+      }
+
+      .dice-formula {
+        display: block,
+      }
+    }
+  }
 }
